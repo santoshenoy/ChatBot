@@ -1,1 +1,5 @@
-from flask import Flask, request, jsonify
+import nltk
+
+nltk.download("punkt")
+nltk.download("wordnet")
+nltk.download("punkt_tab")
