@@ -1,5 +1,12 @@
-import nltk
+from flask import Flask, render_template
 
-nltk.download("punkt")
-nltk.download("wordnet")
-nltk.download("punkt_tab")
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
